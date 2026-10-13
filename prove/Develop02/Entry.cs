@@ -1,3 +1,5 @@
+namespace Prompt;
+
 class Entry
 {
     // attributes
@@ -8,7 +10,9 @@ class Entry
     // behaviors
     public void Display()
     {
+        Console.WriteLine($"Date: {_date}");
         Console.WriteLine($"Prompt: {_prompt}");
+        Console.WriteLine($"Response: {_response}");
+        Console.WriteLine();
     }
-
 }

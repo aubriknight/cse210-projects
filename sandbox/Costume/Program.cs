@@ -26,6 +26,15 @@ class Program
         {
             c.Output();
         }
-        
+
+        // save to file
+        string filename = "costumes.csv";
+
+        using (StreamWriter outputFile = new StreamWriter(filename))
+        {
+            foreach (Costume c in myCostumes) {
+            outputFile.WriteLine($"{c._headwear}, {c._upperGarment}, {c._lowerGarment}, {c._footwear}, {c._accessories}");
+            }
+        }
     }
 }
